@@ -1,0 +1,11 @@
+This paper introduces a Multi-Account and Multi-Tenant Policy-Based Access Control (PBAC) approach for distributed systems, formalized through the use of relational structures, relational algebra and operations.
+The approach is further enhanced by generating risk scores.
+As cloud computing became more prevalent, there was a growing demand for sophisticated software solutions, especially in Software as a Service (SaaS) offerings.
+These systems effectively handle data across diverse accounts, tenants, computing nodes, and networks.
+This approach introduces various problems. (1) First and foremost, permissions must be expressed in a straightforward manner to implement both Role-Based Access Control (RBAC) and Attribute-Based Access Control (ABAC).
+(2) Secondly, the approach necessitates low-latency and high-availability for the evaluation of permissions.
+This becomes particularly intricate due to the inherent challenges posed by the PACELC theorem. Furthermore, in a distributed system with asynchronous operations, there is no assurance that the permissions initially allowing the action remain valid at execution time.
+It is crucial to mitigate this risk and maximize the likelihood of executing with the latest valid permissions at the time of execution.
+(3) Finally, risk assessment becomes intricate, especially as policies granting permissions grow complex. The approach must be capable of handling the complexity of these policies and effectively assess the associated risks.
+
+To address these problems, this paper introduces an architecture, relations, algorithms and an approach for generating risk classifications using scores.
