@@ -4,7 +4,7 @@ This document represents the culmination of the research carried out by Nitro Ag
 
 ## PDF
 
-[Here](https://github.com/autenticami/autenticami-research-and-development/blob/main/autenticami.pdf) is the latest version.
+[Here](https://github.com/autenticami/autenticami-research-paper/blob/main/autenticami.pdf) is the latest version.
 
 ## License
 
