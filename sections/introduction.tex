@@ -21,7 +21,7 @@ This imperative has led to a shift in architectural styles to accommodate worklo
 Moreover, there has been a trend towards the adoption of asynchronous patterns utilizing event streaming processing such as Apache Kafka.
 These platforms are utilized to collect, store and process events representing asynchronous operations that lack a discrete beginning or end.
 
-The figure~\ref{fig:cloud-architecture} illustrates a commonly employed cloud architecture. Clients undergo authentication with a centralized Identity Provider, which subsequently issues a token to the client.
+The Figure \ref{fig:cloud-architecture} illustrates a commonly employed cloud architecture. Clients undergo authentication with a centralized Identity Provider, which subsequently issues a token to the client.
 The client then uses this token to access the resources of the server.
 Two widely embraced protocols in this context are OpenID \cite{c4} and OAuth \cite{c5}. OpenID serves as an open standard for authentication, while OAuth functions as an open standard for authorization.
 
@@ -46,7 +46,7 @@ Therefore, the scope of this paper is to propose a standardized PBAC approach.
 
 The primary consideration is that the Access Control layer should not be embedded within the software solution; instead, it should be provided as an external Access Control Solution (ACS). 
 The main reason relies on the fact that Access Control is a software aspect that is too complex and error-prone to be implemented in each individual software solution.
-Ideally, the ACS should support the creation of separate accounts, enabling each organization to manage the access control of its software solutions within one or more isolated accounts.
+Ideally, the ACS should support the creation of separate accounts, enabling each organization to manage the access control of its software solutions within one or more isolated accounts as per Figure \ref{fig:accounts}.
 
 The ACS can be seen as a platform that enables organizations to create one or more accounts for modeling Access Control. Additionally, it must support the federation of these accounts to enable cross-account access control management when needed.
 

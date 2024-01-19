@@ -11,7 +11,7 @@ It is crucial to note that the Application Development Life Cycle requires disti
     \label{fig:microservices-ddd-bounded-contexts}
 \end{figure}
 
-Figure~\ref{fig:microservices-ddd-bounded-contexts} illustrates an example of bounded contexts using the Domain-Driven Design (DDD) methodology for a hypothetical Software as a Service (SaaS) system that offers Order Management System (OMS) functionalities.
+Figure \ref{fig:microservices-ddd-bounded-contexts} illustrates an example of bounded contexts using the Domain-Driven Design (DDD) methodology for a hypothetical Software as a Service (SaaS) system that offers Order Management System (OMS) functionalities.
 
 \begin{figure}[htbp]
     \centering
@@ -20,7 +20,7 @@ Figure~\ref{fig:microservices-ddd-bounded-contexts} illustrates an example of bo
     \label{fig:microservices-architecture}
 \end{figure}
 
-Meanwhile, Figure~\ref{fig:microservices-architecture} depicts a microservices-based architectural solution that employs the proposed Access Control Solution (ACS) approach. This solution divides the software across two distinct yet federated accounts, enabling both isolation and integration.
+Meanwhile, Figure \ref{fig:microservices-architecture} depicts a microservices-based architectural solution that employs the proposed Access Control Solution (ACS) approach. This solution divides the software across two distinct yet federated accounts, enabling both isolation and integration.
 
 \vspace{15pt}
 
@@ -37,8 +37,8 @@ Let $E$ be the set of the environments $E = \{e_1, e_2, \ldots, e_n\}$ and let $
 It is crucial to note that the organization has to assign each account exclusively to a specific environment otherwise it would raise a security risk.
 
 \begin{boxF}
-    \begin{definition}[Account Patitioning for Environments]
-        Let $AC$ be the set containing all existing accounts and let $E$ represent the set containing all existing environments, Account Patitioning for Environments is defined as the operation of partitioning the set $AC$ with $E$ using the function $f_{env}$ which is formally defined as:
+    \begin{definition}[Account Partitioning for Environments]
+        Let $AC$ be the set containing all existing accounts and let $E$ represent the set containing all existing environments, Account Partitioning for Environments is defined as the operation of partitioning the set $AC$ with $E$ using the function $f_{env}$ which is formally defined as:
         \begin{equation*}
             \begin{gathered}
                 f_{env}:AC \rightarrow AE | AE \subset AC \times E\\
@@ -79,7 +79,7 @@ and:
 
 \vspace{15pt}
 
-An organization developing the software solution, as illustrated in Figure~\ref{fig:microservices-architecture}, has to create multiple environments. 
+An organization developing the software solution, as illustrated in Figure \ref{fig:microservices-architecture}, has to create multiple environments. 
 Assuming three environments as per Table~\ref{table:table-environments} (DEV, TEST, and PROD), each requiring two accounts (one for $ORDERS$, $INENTORY$ and one for $BANKING$), this results in a total necessity of six accounts as per Table~\ref{table:table-accounts} .
 
 \begin{boxF}
