@@ -25,6 +25,16 @@ Subsequently, it evaluates whether the specified action can be performed on the 
 \end{boxF}
 
 \begin{boxF}
+    \begin{definition}[UUA Matching Algorithm - $f_{uuamatch}$]
+        The function $f_{uuamatch}$ is designed to take two Uniform Action Identifiers (UUAs) as input and returns a Boolean value.
+        
+        Specifically, it returns True if the first $UUA$, denoted as $uua1$, is matched within the second $UUA$, denoted as $uua2$. 
+        
+        An UUA is considered to be matched if the two are identical or if $uua2$ has wildcards that permit the match of $uua1$.
+    \end{definition}
+\end{boxF}
+
+\begin{boxF}
     \begin{definition}[Policy Evaluation Algorithm - $f_{eval}$]
         Input:
         \begin{itemize}
@@ -44,7 +54,9 @@ Subsequently, it evaluates whether the specified action can be performed on the 
 
         \hspace{2pt} $\forall action_{DP} \in DPA,$
             
-        \hspace{10pt} if $action_{DP} = iaction$ return false
+        \hspace{10pt} if $f_{uuamatch}(iaction, action_{DP}) is false $ 
+        
+        \hspace{20pt} return false
         \vspace{10pt}
         
         \hspace{2pt} $AP = \sigma_{IdentityId=iid, Effect='allow'}(PI \bowtie P)$
@@ -53,7 +65,9 @@ Subsequently, it evaluates whether the specified action can be performed on the 
 
         \hspace{2pt} $\forall action_{AP} \in APA,$
             
-        \hspace{10pt} if $action_{AP} = iaction$ return true
+        \hspace{10pt} if $f_{uuamatch}(iaction, action_{AP}) is true $ 
+        
+        \hspace{20pt} return true
         \vspace{10pt}
 
         \hspace{2pt} return false
@@ -153,11 +167,15 @@ To prevent falling victim to a message tampering attack, the ACS solution requir
 
             \hspace{2pt} // Validate the signature of the message
 
-            \hspace{2pt} $f_{validate}(msg)$
+            \hspace{2pt} $if f_{validate}(msg) is false$
+            
+            \hspace{10pt} return
 
             \hspace{2pt} // Elevate the identity to be executed as the role in the message
 
-            \hspace{2pt} $f_{elevate-role}(msg)$
+            \hspace{2pt} $if f_{elevate-role}(msg) is false$
+            
+            \hspace{10pt} return
 
             \hspace{2pt} // Process the message
         \label{definition:message-processing}
