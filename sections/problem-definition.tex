@@ -375,7 +375,7 @@ Lastly, configurations for tenants and identities were completed.
 
 \vspace{15pt}
 
-The Access Control Solution (ACS) helps clearly identify resources and actions by using a $UUR$ (Universally Unique Resource) and $UUA$ (Universally Unique Action).
+The Access Control Solution (ACS) helps clearly identify resources and actions by using a $UUR$ (Universally Unique Resource) and a $RA$ (Resource Action).
 
 \vspace{15pt}
 
@@ -399,23 +399,23 @@ Following is an example of a UUR for the "orders" domain in the project "oms-sys
 
 \vspace{15pt}
 
-A $UUA$ is expressed as a string with the specific template:, 
+A $RA$ is expressed as a string with the specific template:, 
 \begin{equation*}
     \begin{gathered}
         {resource}:{action}
     \end{gathered}
 \end{equation*}
 
-Following is an example of a $UUA$ for the action "get" on the resource "product":
+Following is an example of a $RA$ for the action "get" on the resource "product":
 \begin{equation*}
     \begin{gathered}
         product:get
     \end{gathered}
 \end{equation*}
 
-Both $UUR$ and $UUA$ accept wildcard characters for matching wildcards.
+Both $UUR$ and $RA$ accept wildcard characters for matching wildcards.
 
-The final step is a set of policies formed by combining the UUR and the UUA as per Table~\ref{table:table-policies}.
+The final step is a set of policies formed by combining the UUR and the RA as per Table~\ref{table:table-policies}.
 
 \begin{table*}[htbp]
     \caption{The Relation Policies}
@@ -423,7 +423,7 @@ The final step is a set of policies formed by combining the UUR and the UUA as p
     \begin{center}
     \begin{tabular}{|c|c|c|c|}
     \hline
-    PolicyId & Effect & UUR & UUA\\
+    PolicyId & Effect & UUR & RA\\
     \hline
     p1 & allow & uur:951435799851:tenant1:oms-system:orders:product/* & product:get\\
     \hline

@@ -25,12 +25,12 @@ Subsequently, it evaluates whether the specified action can be performed on the 
 \end{boxF}
 
 \begin{boxF}
-    \begin{definition}[UUA Matching Algorithm - $f_{uuamatch}$]
-        The function $f_{uuamatch}$ is designed to take two Uniform Action Identifiers (UUAs) as input and returns a Boolean value.
+    \begin{definition}[RA Matching Algorithm - $f_{ramatch}$]
+        The function $f_{ramatch}$ is designed to take two Uniform Action Identifiers (RAs) as input and returns a Boolean value.
         
-        Specifically, it returns True if the first $UUA$, denoted as $uua1$, is matched within the second $UUA$, denoted as $uua2$. 
+        Specifically, it returns True if the first $RA$, denoted as $ra1$, is matched within the second $RA$, denoted as $ra2$. 
         
-        An UUA is considered to be matched if the two are identical or if $uua2$ has wildcards that permit the match of $uua1$.
+        An RA is considered to be matched if the two are identical or if $ra2$ has wildcards that permit the match of $ra1$.
     \end{definition}
 \end{boxF}
 
@@ -50,22 +50,22 @@ Subsequently, it evaluates whether the specified action can be performed on the 
             
         \hspace{2pt} $DP = \sigma_{IdentityId=iid, Effect='deny'}(PI \bowtie P)$
         
-        \hspace{2pt} $DPA = \pi_{UUA}(\sigma_{f_{uurmatch}(iurr, UUR)}(DP)$)
+        \hspace{2pt} $DPA = \pi_{RA}(\sigma_{f_{uurmatch}(iurr, UUR)}(DP)$)
 
         \hspace{2pt} $\forall action_{DP} \in DPA,$
             
-        \hspace{10pt} if $f_{uuamatch}(iaction, action_{DP}) is false $ 
+        \hspace{10pt} if $f_{ramatch}(iaction, action_{DP}) is false $ 
         
         \hspace{20pt} return false
         \vspace{10pt}
         
         \hspace{2pt} $AP = \sigma_{IdentityId=iid, Effect='allow'}(PI \bowtie P)$
 
-        \hspace{2pt} $APA = \pi_{UUA}(\sigma_{f_{uurmatch}(iurr, UUR)}(AP)$)
+        \hspace{2pt} $APA = \pi_{RA}(\sigma_{f_{uurmatch}(iurr, UUR)}(AP)$)
 
         \hspace{2pt} $\forall action_{AP} \in APA,$
             
-        \hspace{10pt} if $f_{uuamatch}(iaction, action_{AP}) is true $ 
+        \hspace{10pt} if $f_{ramatch}(iaction, action_{AP}) is true $ 
         
         \hspace{20pt} return true
         \vspace{10pt}
