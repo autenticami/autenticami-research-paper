@@ -375,7 +375,7 @@ Lastly, configurations for tenants and identities were completed.
 
 \vspace{15pt}
 
-The Access Control Solution (ACS) helps clearly identify resources and actions by using a UUR (Universally Unique Resource) and RA (Resource Action).
+The Access Control Solution (ACS) helps clearly identify resources and actions by using a $UUR$ (Universally Unique Resource) and $UUA$ (Universally Unique Action).
 
 \vspace{15pt}
 
@@ -399,14 +399,14 @@ Following is an example of a UUR for the "orders" domain in the project "oms-sys
 
 \vspace{15pt}
 
-An AR is expressed as a string with the specific template:, 
+A $UUA$ is expressed as a string with the specific template:, 
 \begin{equation*}
     \begin{gathered}
         {resource}:{action}
     \end{gathered}
 \end{equation*}
 
-Following is an example of an AR for the action "get" on the resource "product":
+Following is an example of a $UUA$ for the action "get" on the resource "product":
 \begin{equation*}
     \begin{gathered}
         product:get
@@ -415,7 +415,7 @@ Following is an example of an AR for the action "get" on the resource "product":
 
 Both $UUR$ and $UUA$ accept wildcard characters for matching wildcards.
 
-The final step is a set of policies formed by combining the UUR (Universally Unique Resource) and the RA (Resource Action) as per Table~\ref{table:table-policies}.
+The final step is a set of policies formed by combining the UUR and the UUA as per Table~\ref{table:table-policies}.
 
 \begin{table*}[htbp]
     \caption{The Relation Policies}
@@ -488,7 +488,7 @@ Evaluating policies on each computing node can be a resource-intensive operation
 \subsection{Hacking of the Roles with Messages}
 \label{sec:hacking-role-messages}
 
-In a distributed system, a common scenario involves publishing a message that is later consumed by a different node.
+In a distributed system, a common scenario involves publishing a message that is later consumed by a different node as per Figure \ref{fig:hacking-roles-messages}.
 The node consuming the message should ideally have identical permissions to the one that published it.
 
 However, if the consuming node has excessively broad permissions, it poses a security risk, potentially executing actions that were not intended to be permitted. 
@@ -509,7 +509,7 @@ These issues need to be addressed both at the message level and the identity lev
 
 Especially in an Eventual Consistent system, the time it takes to process an action can be significantly delayed from when it was initially requested. 
 This introduces another type of issue where an identity publishes a message that is later consumed by a different identity. 
-However, the original identity that published the message no longer has the permission to execute that action.
+However, the original identity that published the message no longer has the permission to execute that action as per Figure \ref{fig:hacking-republish-message}.
 
 In such cases, the system should either discard the message without processing it or redirect the message to a different queue, necessitating an approval process.
 
