@@ -1,5 +1,9 @@
 # A Multi-Account and Multi-Tenant Policy-Based Access Control (PBAC) Approach for Distributed Systems Augmented with Risk Scores Generation
 
+<p align="left">
+  <img src="https://raw.githubusercontent.com/autenticami/autenticami-assets/main/logo/transparent-txt/transparent-2lines.svg" class="center" width="400px" height="auto"/>
+</p>
+
 This document represents the culmination of the research carried out by Nitro Agility S.r.l. pertaining to the project entitled "A Multi-Account and Multi-Tenant Policy-Based Access Control (PBAC) Approach for Distributed Systems Augmented with Risk Scores Generation".
 
 ## PDF
