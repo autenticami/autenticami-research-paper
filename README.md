@@ -1,5 +1,7 @@
 # A Multi-Account and Multi-Tenant Policy-Based Access Control (PBAC) Approach for Distributed Systems Augmented with Risk Scores Generation
 
+> This repo has moved to [autorizzami-research-paper](https://github.com/autorizzami/autorizzami-research-paper)
+
 <p align="left">
   <img src="https://raw.githubusercontent.com/autenticami/autenticami-assets/main/logo/transparent-txt/transparent-2lines.svg" class="center" width="400px" height="auto"/>
 </p>
